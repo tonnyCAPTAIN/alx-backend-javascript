@@ -1,6 +1,4 @@
-
-tack debugging by fixing a line in configuration file
-rts = {
+module.exports = {
   env: {
     browser: false,
     es6: true,
@@ -35,8 +33,3 @@ rts = {
     }
   ]
 };
-exec {'config file':
-path     => ['/usr/bin', '/bin'],
-command  => "sudo sed -i 's/class-wp-locale.phpp/class-wp-locale.php/g' /var/www/html/wp-settings.php",
-provider => 'shell',
-}
